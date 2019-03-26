@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<div id="Su-Dope-Ku Game">
+<head>
+	<title>Su-Dope-Ku Single Player</title>
+	<link rel="stylesheet" type="text/css" href="Su-Dope-Ku.css">
+	<script src="Su-Dope-Ku.js"></script>
+</head>
+
+<div id="Title">
+	<center>
+	  <h1>Su-Dope-Ku</h1>
+	</center>
+</div>
+
+<body>
+	<table width=50%>
+		<tr>
+			<td>
+				Time:<br>
+				<script>
+					var sec = 0;
+					var min = 0;
+
+					var interval = setInterval(function() 
+					{
+    				sec++;
+    				document.getElementById("sec").innerHTML = sec;
+    				document.getElementById("min").innerHTML = min;
+    				if (sec == 60 ) {
+    				min ++;
+        			sec = 0;
+    				}
+    				if (min === 45) clearInterval(interval);
+					}, 1000);
+				</script>
+			</td>
+		</tr>
+	</table>
+
+<p><span id = "min">0</span> : <span id = "sec">0</span></p>
+
+<center>
+<button class="open-button" onclick="openForm()"><h6>Pause</h6></button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Game Paused</h1>
+    <button type="button" class="btn resume" onclick="closeForm()">Resume Game</button>
+    <br>
+    <button type="button" class="btn exit" onclick="window.location.href = 'Su-Dope-Ku Title Screen.html';">Exit</button>
+  </form>
+</div>
+
+</center><br><br>
+				Remaining Lives:<br><br>
+				Score: <br><br>
+			</td>
+			<td>
+				<center>
+					<div id="gameBoard" class="form-Board">
+						Insert Actual Game board here<br>
+						Test box <input type="text" name="fname">
+					</div>
+				</center>
+				<center>
+	  				<button class="open-button" onclick="openForm()"><h6>Pause</h6></button>
+						<div class="form-popup" id="myForm">
+	   						<form action="/action_page.php" class="form-container">
+	     					<h1>Game Paused</h1>
+
+	    					<button type="button" class="btn resume" onclick="closeForm()">Resume Game</button>
+	      					<br>
+	    					<button type="button" class="btn exit" onclick="window.location.href = 'Su-Dope-Ku Title Screen.html';">Exit</button>
+	   						</form>
+	 					</div>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table id="ads" width="100%">
+		<tr>
+			<td></td>
+			<td align="center"><img src="Ads.gif" alt="Advertisements"></td>
+		</tr>
+	</table>
+		
+</body>
+</div>
+</html>

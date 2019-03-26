@@ -1,0 +1,98 @@
+body 
+{font-family: Arial, Helvetica, sans-serif;}
+*{box-sizing: border-box;}
+
+h6{font-size: 25px;}
+
+/* Button used to open the contact form*/
+.open-button {
+  background-color: #555;
+  color: white;
+  position: fixed;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  right: 15px;
+  padding: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form-Board{
+  right: 15px;
+  padding: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 1200px;
+  max-height: 1200px;
+  padding: 10px;
+  background-color: #8b8f96;
+}
+
+/* Add a green background color to the resume button */
+.form-container .resume {
+  background-color: green;
+}
+
+.form-container .exit {
+  background-color: red;
+}
+/* Set a style for the buttons*/
+.form-container .btn {
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.plmode {
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+/* Style for the timer*/
+#sec {
+  font-size: 20px;
+  margin-top: 0px;
+}
+
+#min {
+  font-size: 20px;
+  margin-top: 0px;
+}
+
+#Title{
+  text-align: center;
+}
+
+#Mainbuttons {
+  text-align: center;
+}
+
+#ads{vertical-align: bottom;}
