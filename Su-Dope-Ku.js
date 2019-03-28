@@ -114,6 +114,35 @@ function checkNum() {
 
 	var b61 = (document.getElementById("box61").value);
 	var bx61 = parseInt(b61);
+	
+	var b63 = (document.getElementById("box63").value);
+	var bx63 = parseInt(b63);
+
+	var b64 = (document.getElementById("box64").value);
+	var bx64 = parseInt(b64);
+
+	var b65 = (document.getElementById("box65").value);
+	var bx65 = parseInt(b65);
+
+	var b66 = (document.getElementById("box66").value);
+	var bx66 = parseInt(b77);
+
+	var b70 = (document.getElementById("box70").value);
+	var bx70 = parseInt(b70);
+
+	var b73 = (document.getElementById("box73").value);
+	var bx73 = parseInt(b73);
+
+
+
+	var b75 = (document.getElementById("box75").value);
+	var bx75 = parseInt(b75);
+
+	var b76 = (document.getElementById("box76").value);
+	var bx76 = parseInt(b76);
+
+	var b78 = (document.getElementById("box78").value);
+	var bx78 = parseInt(b78);
 
 
 	if (bx0 ==7) {
