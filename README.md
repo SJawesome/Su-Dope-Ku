@@ -11,3 +11,5 @@ How to play:
 4. Fill in the boxes with a number from 1-9 (see actual sudoku rules for specifics)
 5. Click "Solve" to check your answers
 6. Once you have completed the puzzle, you have won and the program will not do anything else, at this time you may close your browser window.
+
+Note: Sarah had access to all the final source code as she was responsible for combining everyone else's code. This is why all the final uploads are by SJ. 
