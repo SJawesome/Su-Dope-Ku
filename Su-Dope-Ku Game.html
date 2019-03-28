@@ -22,18 +22,36 @@
 				<script>
 					var sec = 0;
 					var min = 0;
+					var interval;
+					var timer_is_on = false;
 
-					var interval = setInterval(function() 
-					{
-    				sec++;
-    				document.getElementById("sec").innerHTML = sec;
-    				document.getElementById("min").innerHTML = min;
-    				if (sec == 60 ) {
-    				min ++;
-        			sec = 0;
-    				}
-    				if (min === 45) clearInterval(interval);
-					}, 1000);
+					function timer() {
+					    document.getElementById("sec").innerHTML = sec;
+					    document.getElementById("min").innerHTML = min;
+					    sec = sec +1;
+					    interval = setTimeout(timer, 1000);
+
+					    if (sec == 60 ) {
+						min = min + 1;
+						sec = 0;
+					    }
+
+					    if (min === 45) {
+						alert ("Game Over");
+					    }
+					}
+
+					function resumeTime() {
+						if (!timer_is_on) {
+						timer_is_on = true;
+						timer();
+					    	}
+					}
+
+					function pauseTime() {
+					    	clearTimeout(interval);
+					    	timer_is_on = false;
+					}
 				</script>
 			</td>
 		</tr>
@@ -42,12 +60,12 @@
 <p><span id = "min">0</span> : <span id = "sec">0</span></p>
 
 <center>
-<button class="open-button" onclick="openForm()"><h6>Pause</h6></button>
+<button class="open-button" onclick="openForm()" onclick="pauseTime()"><h6>Pause</h6></button>
 
 <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
     <h1>Game Paused</h1>
-    <button type="button" class="btn resume" onclick="closeForm()">Resume Game</button>
+    <button type="button" class="btn resume" onclick="closeForm()" onclick="resumeTime()">Resume Game</button>
     <br>
     <button type="button" class="btn exit" onclick="window.location.href = 'Su-Dope-Ku Title Screen.html';">Exit</button>
   </form>
