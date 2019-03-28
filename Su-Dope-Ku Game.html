@@ -4,17 +4,16 @@
 <div id="Su-Dope-Ku Game">
 <head>
 	<title>Su-Dope-Ku Single Player</title>
+		<div id="Title">
+		<center>
+	  		<h1>Su-Dope-Ku</h1>
+		</center>
+		</div>
 	<link rel="stylesheet" type="text/css" href="Su-Dope-Ku.css">
 	<script src="Su-Dope-Ku.js"></script>
 </head>
 
-<div id="Title">
-	<center>
-	  <h1>Su-Dope-Ku</h1>
-	</center>
-</div>
-
-<body>
+<body onload="Ready()">
 	<table width=50%>
 		<tr>
 			<td>
@@ -24,86 +23,207 @@
 					var min = 0;
 					var interval;
 					var timer_is_on = false;
-
 					function timer() {
 					    document.getElementById("sec").innerHTML = sec;
 					    document.getElementById("min").innerHTML = min;
 					    sec = sec +1;
 					    interval = setTimeout(timer, 1000);
-
 					    if (sec == 60 ) {
 						min = min + 1;
 						sec = 0;
 					    }
-
 					    if (min === 45) {
 						alert ("Game Over");
 					    }
 					}
-
 					function resumeTime() {
 						if (!timer_is_on) {
 						timer_is_on = true;
 						timer();
 					    	}
 					}
-
 					function pauseTime() {
 					    	clearTimeout(interval);
 					    	timer_is_on = false;
 					}
 				</script>
-			</td>
-		</tr>
-	</table>
-
-<p><span id = "min">0</span> : <span id = "sec">0</span></p>
-
-<center>
-<button class="open-button" onclick="openForm()" onclick="pauseTime()"><h6>Pause</h6></button>
-
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Game Paused</h1>
-    <button type="button" class="btn resume" onclick="closeForm()" onclick="resumeTime()">Resume Game</button>
-    <br>
-    <button type="button" class="btn exit" onclick="window.location.href = 'Su-Dope-Ku Title Screen.html';">Exit</button>
-  </form>
-</div>
-
-</center><br><br>
-				Remaining Lives:<br><br>
-				Score: <br><br>
+				<p><span id = "min">0</span> : <span id = "sec">0</span></p>
 			</td>
 			<td>
-				<center>
-					<div id="gameBoard" class="form-Board">
-						Insert Actual Game board here<br>
-						Test box <input type="text" name="fname">
-					</div>
-				</center>
-				<center>
-	  				<button class="open-button" onclick="openForm()"><h6>Pause</h6></button>
-						<div class="form-popup" id="myForm">
-	   						<form action="/action_page.php" class="form-container">
-	     					<h1>Game Paused</h1>
-
-	    					<button type="button" class="btn resume" onclick="closeForm()">Resume Game</button>
-	      					<br>
-	    					<button type="button" class="btn exit" onclick="window.location.href = 'Su-Dope-Ku Title Screen.html';">Exit</button>
-	   						</form>
-	 					</div>
-				</center>
+				Remaining Lives: N/A<br>
+			</td>
+			<td>
+				Score: 0<br>
 			</td>
 		</tr>
 	</table>
+
+	<center>
+		<div class="form-popup" id="startButton">
+  			<form action="/action_page.php" class="form-container">
+    			<h5>Random Text</h5>
+    			<h1>Ready?</h1><br>
+    			<h5>Random Text</h5>
+    			<button type="button" class="btn resume" onclick="Go()">START</button><br>
+    			<h5>Random Text</h5>
+  			</form>
+		</div>
+	</center>
+
+	<center>
+		<div id="gameBoard" class="form-Board">
+			<table class="tableClass">
+				<tr>
+					<td class="tdClass"><input id="box0" type="text"></td>
+					<td class="tdClass"><input id="box1" type="text"></td>
+					<td class="tdClass"><input id="box2" type="text"></td>
+
+					<td class="tdClass"><input id="box3" type="text"></td>
+					<td class="tdClass"><input id="box4" type="text"></td>
+					<td class="tdClass"><input id="box5" type="text" value="4" disabled></td>
+
+					<td class="tdClass"><input id="box6" type="text"></td>
+					<td class="tdClass"><input id="box7" type="text" value="9" disabled></td>
+					<td class="tdClass"><input id="box8" type="text"></td>
+				</tr>
+
+				<tr>
+					<td class="tdClass"><input id="box9" type="text" value="8" disabled></td>
+					<td class="tdClass"><input id="box10" type="text"></td>
+					<td class="tdClass"><input id="box11" type="text" value="2" disabled></td>
+
+					<td class="tdClass"><input id="box12" type="text" value="9" disabled></td>
+					<td class="tdClass"><input id="box13" type="text"></td>
+					<td class="tdClass"><input id="box14" type="text" value="3" disabled></td>
+
+					<td class="tdClass"><input id="box15" type="text"></td>
+					<td class="tdClass"><input id="box16" type="text"></td>
+					<td class="tdClass"><input id="box17" type="text"></td>
+				</tr>
+
+				<tr>
+					<td class="tdClass"><input id="box18" type="text" value="9" disabled></td>
+					<td class="tdClass"><input id="box19" type="text"></td>
+					<td class="tdClass"><input id="box20" type="text" value="1" disabled></td>
+
+					<td class="tdClass"><input id="box21" type="text" value="2" disabled></td>
+					<td class="tdClass"><input id="box22" type="text"></td>
+					<td class="tdClass"><input id="box23" type="text"></td>
+
+					<td class="tdClass"><input id="box24" type="text" value="3" disabled></td>
+					<td class="tdClass"><input id="box25" type="text"></td>
+					<td class="tdClass"><input id="box26" type="text"></td>
+				</tr>
+
+				<tr>
+					<td class="tdClass"><input id="box27" type="text"></td>
+					<td class="tdClass"><input id="box28" type="text"></td>
+					<td class="tdClass"><input id="box29" type="text"></td>
+
+					<td class="tdClass"><input id="box30" type="text"></td>
+					<td class="tdClass"><input id="box31" type="text" value="4" disabled></td>
+					<td class="tdClass"><input id="box32" type="text" value="9" disabled></td>
+
+					<td class="tdClass"><input id="box33" type="text" value="1" disabled></td>
+					<td class="tdClass"><input id="box34" type="text" value="5" disabled></td>
+					<td class="tdClass"><input id="box35" type="text" value="7" disabled></td>
+				</tr>
+
+				<tr>
+					<td class="tdClass"><input id="box36" type="text"></td>
+					<td class="tdClass"><input id="box37" type="text" value="1" disabled></td>
+					<td class="tdClass"><input id="box38" type="text" value="3" disabled></td> 
+
+					<td class="tdClass"><input id="box39" type="text"></td>
+					<td class="tdClass"><input id="box40" type="text" value="5" disabled></td>
+					<td class="tdClass"><input id="box41" type="text"></td>
+
+					<td class="tdClass"><input id="box42" type="text" value="9" disabled></td>
+					<td class="tdClass"><input id="box43" type="text" value="2" disabled></td>
+					<td class="tdClass"><input id="box44" type="text"></td>
+				</tr>
+
+				<tr>
+					<td class="tdClass"><input id="box45" type="text" value="5" disabled></td>
+					<td class="tdClass"><input id="box46" type="text" value="7" disabled></td>
+					<td class="tdClass"><input id="box47" type="text" value="9" disabled></td>
+
+					<td class="tdClass"><input id="box48" type="text" value="1" disabled></td>
+					<td class="tdClass"><input id="box49" type="text" value="2" disabled></td>
+					<td class="tdClass"><input id="box50" type="text"></td>
+
+					<td class="tdClass"><input id="box51" type="text"></td>
+					<td class="tdClass"><input id="box52" type="text"></td>
+					<td class="tdClass"><input id="box53" type="text"></td>
+				</tr>
+
+				<tr>
+					<td class="tdClass"><input id="box54" type="text"></td>
+					<td class="tdClass"><input id="box55" type="text"></td>
+					<td class="tdClass"><input id="box56" type="text" value="7" disabled></td>
+
+					<td class="tdClass"><input id="box57" type="text"></td>
+					<td class="tdClass"><input id="box58" type="text"></td>
+					<td class="tdClass"><input id="box59" type="text" value="2" disabled></td>
+
+					<td class="tdClass"><input id="box60" type="text" value="6" disabled></td>
+					<td class="tdClass"><input id="box61" type="text"></td>
+					<td class="tdClass"><input id="box62" type="text" value="3" disabled></td>
+				</tr>
+
+				<tr>
+					<td class="tdClass"><input id="box63" type="text"></td>
+					<td class="tdClass"><input id="box64" type="text"></td>
+					<td class="tdClass"><input id="box65" type="text"></td>
+
+					<td class="tdClass"><input id="box66" type="text"></td>
+					<td class="tdClass"><input id="box67" type="text" value="3" disabled></td>
+					<td class="tdClass"><input id="box68" type="text" value="8" disabled></td>
+
+					<td class="tdClass"><input id="box69" type="text" value="2" disabled></td>
+					<td class="tdClass"><input id="box70" type="text"></td>
+					<td class="tdClass"><input id="box71" type="text" value="5" disabled></td>
+				</tr>
+
+				<tr>
+					<td class="tdClass"><input id="box72" type="text" value="3" disabled></td>
+					<td class="tdClass"><input id="box73" type="text"></td>
+					<td class="tdClass"><input id="box74" type="text" value="8" disabled></td>
+
+					<td class="tdClass"><input id="box75" type="text"></td>
+					<td class="tdClass"><input id="box76" type="text"></td>
+					<td class="tdClass"><input id="box77" type="text" value="1" disabled></td>
+
+					<td class="tdClass"><input id="box78" type="text"></td>
+					<td class="tdClass"><input id="box79" type="text" value="4" disabled=""></td>
+					<td class="tdClass"><input id="box80" type="text" value="9" disabled></td>
+				</tr>
+			</table>
+			<button id="checkB" type="button" onclick="checkIt()">Solve</button><br>
+		</div>
+	</center>
+
+	<center>
+	<button class="open-button" onclick="openForm(); pauseTime();"><h6>Pause</h6></button>
+
+	<div class="form-popup" id="myForm">
+  		<form action="/action_page.php" class="form-container">
+    		<h5>Random Text</h5>
+    		<h1>Game Paused</h1>
+    		<h5>Random Text</h5>
+    		<button type="button" class="btn resume" onclick="closeForm(); resumeTime();">Resume Game</button><br>
+   			<button type="button" class="btn exit" onclick="window.location.href = 'Su-Dope-Ku Title Screen.html';">Exit</button>
+   			<h5>Random Text</h5>
+ 		</form>
+	</div>
+	</center>
+
 	<table id="ads" width="100%">
 		<tr>
-			<td></td>
-			<td align="center"><img src="Ads.gif" alt="Advertisements"></td>
+			
+			<td align="center"><br><br><br><br><br><br><br><br><br><img src="Ads.gif" alt="Advertisements" width="500"></td>
 		</tr>
 	</table>
-		
 </body>
 </div>
 </html>
