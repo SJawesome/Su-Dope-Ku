@@ -3,6 +3,19 @@ body
 *{box-sizing: border-box;}
 
 h6{font-size: 25px;}
+h5{font-size: 15px; color: #8b8f96;}
+
+#checkB{align-self: center;}
+
+  .tableclass{border : 0px;}
+  .tdClass{border : 1px solid #bfbfbf;text-align: center;vertical-align: middle;}
+  input{text-align: center;padding: 0;outline: none;border: 0px;width: 40px;height: 35px;font-size: 20px;}
+
+  #box0, #box1, #box2, #box9, #box10, #box11, #box18, #box19,#box20{background-color: #bfbfbf;}
+  #box6, #box7, #box8, #box15, #box16, #box17, #box24, #box25,#box26{background-color: #bfbfbf;}
+  #box30, #box31, #box32, #box39, #box40, #box41, #box48, #box49,#box50{background-color: #bfbfbf;}
+  #box54, #box55, #box56, #box63, #box64, #box65, #box72, #box73,#box74{background-color: #bfbfbf;}
+  #box60, #box61, #box62, #box69, #box70, #box71, #box78, #box79,#box80{background-color: #bfbfbf;}
 
 /* Button used to open the contact form*/
 .open-button {
@@ -95,4 +108,5 @@ h6{font-size: 25px;}
   text-align: center;
 }
 
+/*The gif for the ads at the bottom*/
 #ads{vertical-align: bottom;}
